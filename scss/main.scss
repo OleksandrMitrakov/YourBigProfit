@@ -125,7 +125,7 @@ header {
 
 @media (min-width: 1001px) {
   #top {
-    font-size: 3em;
+    font-size: 2em;
     height: 700px;
   }
 }
@@ -149,21 +149,23 @@ header {
 
 #main {
   float: left;
-  background-color: red;
+  background-color: #f4f4f4;
   border-top: 2px solid silver;
   color: #484848;
   font-size: 1.3em;
   & div {
     width: 48%;
-    margin-right: 2%;
+    margin-left: 2%;
     float: left;
   }
   & h2 {
-    font-size: 3em;
-    padding-left: 10%;
+    font-size: 1.5em;
+    padding-left: 3%;
+    margin-top: 30%;
   }
   & span {
     color: #a0a0a0;
+    font-size: 0.93em;
   }
 }
 
@@ -188,11 +190,7 @@ header {
   }
 
   #main h2{
-    padding-left: 30%;
-  }
-
-  #main h2{
-    padding-left: 30%;
+    padding-left: 5%;
   }
 }
 
@@ -251,19 +249,6 @@ header {
 }
 
 /*Contact block*/
-#contacts {
-  width: 100%;
-  float: left;
-  padding-bottom: 40px;
-  padding-top: 70px;
-  border-top: 4px solid #ccc;
-  background: #f4f4f4;
-  & h5 {
-    font-size: 3em;
-    color: #4f4f4f;
-  }
-}
-
 #form_input {
   margin-top: 15px;
   width: 40%;
@@ -280,8 +265,8 @@ header {
   }
   & input, & textarea {
     margin-bottom: 10px;
-    width: 70%;
-    padding: 10px 2%;
+    width: 100%;
+    padding: 10px;
     border-radius: 7px;
     border: 2px solid silver;
     font-size: 0.9 em;
@@ -306,6 +291,54 @@ header {
     background-color: #c15443;
   }
 }
+
+#contacts {
+  width: 100%;
+  float: left;
+  padding-top: 90px;
+  background: #f4f4f4;
+  border-top: 2px dashed #e4e4e4;
+  padding-bottom: 70px;
+  & h5 {
+    font-size: 1.9em;
+    color: #4f4f4f;
+    margin-left: 18%;
+  }
+  & h3 {
+    font-size: 1.5em;
+  }
+  & div {
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+  }
+  & .headingInfo {
+    color: #7d7d7d;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  & h3 {
+    margin-bottom: 20px;
+    margin-top: 3%;
+  }
+  & p {
+    font-family: Arimo, Helvetica, sans-serif;
+    color: #4a4a4a;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  #contacts div {
+    width: 80%;
+    margin-top: 3%;
+  }
+  #contacts .kontaktInfo {
+    padding-left: 23%;
+  }
+}
+
 
 /*faq block*/
 #faq {
