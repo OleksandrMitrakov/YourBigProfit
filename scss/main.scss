@@ -373,9 +373,9 @@ header {
 
 /*comments block*/
 #comments {
-  background-color: #fff;
+  background-color: yellow;
   border-top: 2px dashed #e4e4e4;
-  width: 80%;
+  width: 100%;
   float: left;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -401,14 +401,14 @@ header {
 @media (min-width: 801px) {
   #comments div {
     width: 70%;
-    margin-left: 25%;
+    margin-left: 15%;
   }
 }
 
 @media (max-width: 800px) {
   #comments div {
-    width: 85%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left: 10%;
     float: left;
     text-align: center;
   }
