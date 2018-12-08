@@ -15,10 +15,10 @@
       <span>Your Big Profit</span>
     </div>
     <div id="about">
-      <a href="#" title="Возможности" onclick="slowScroll('#main')">O NAS</a>
-      <a href="#" title="Преимущества" onclick="slowScroll('#overview')">OFERTA</a>
-      <a href="#" title="Контакты" onclick="slowScroll('#contacts')">KONTAKT</a>
-      <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">REFERENCJE</a>
+      <a href="#" title="AboutUs" onclick="slowScroll('#main')">O NAS</a>
+      <a href="#" title="Offer" onclick="slowScroll('#overview')">OFERTA</a>
+      <a href="#" title="Contacts" onclick="slowScroll('#contacts')">KONTAKT</a>
+      <a href="#" title="Comments" onclick="slowScroll('#comments')">REFERENCJE</a>
     </div>
   </header>
 
@@ -30,7 +30,6 @@
   <div id="main">
     <div class="intro">
       <h2>KILKA SŁÓW O NAS…</h2>
-      <span>Big choise everything that can help you</span>
     </div>
     <div class="text">
       <span>Nasza firma pojawiła się na rynku niedawno. Tworzy ją grupa ludzi, którzy mają doświadczenie w wielu dziedzinach - transport i logistyka, eksport i import, gospodarka międzynarodowa, audyt i rachunkowość, cło i odprawy celne, handel hurtowy i detaliczny. Współtworzyliśmy i prowadzimy firmę z pasją. Oferujemy usługi na podstawie indywidualnych umów z klientem. Podejmujemy się przewozu większości towarów. Umowy mogą być jednorazowe, lub długofalowe. Zrobimy dla Was wszystko:)</span>
@@ -89,34 +88,8 @@
 
   </div>
 
-  <div id="faq">
-    <div>
-      <span class="title">Payment</span><br>
-      <span class="heading">How it works?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-      <span class="heading">How it works?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-      <span class="heading">How it works?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-    </div>
-    <div>
-      <span class="title">Information</span><br>
-      <span class="heading">What does it contain?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-      <span class="heading">What does it contain?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-      <span class="heading">What does it contain?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-    </div>
-    <div>
-      <span class="title">Quality</span><br>
-      <span class="heading">What we have?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-      <span class="heading">What we have?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-      <span class="heading">What we have?</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed nesciunt neque architecto minima fugiat error quod accusamus, ex odio natus impedit distinctio? Quo perspiciatis quibusdam fugiat magnam, tenetur, odit.</p>
-    </div>
+  <div id="comments">
+        <div id="disqus_thread"></div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -134,6 +107,19 @@
       else
         $("header").attr("class", "fixed");
     })
+
+
+    var disqus_config = function () {
+    this.page.url = 'ybp.surge.sh';
+    this.page.identifier = 'index.html';
+
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ybp-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
   </script>
 </body>
 

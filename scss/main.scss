@@ -126,7 +126,7 @@ header {
 @media (min-width: 1001px) {
   #top {
     font-size: 2em;
-    height: 700px;
+    height: 750px;
   }
 }
 
@@ -141,7 +141,7 @@ header {
   #top {
     font-size: 1.5em;
     padding-top: 50%;
-    height: 500px;
+    height: 400px;
   }
 }
 
@@ -184,13 +184,27 @@ header {
 }
 
 @media (max-width: 700px){
+  // #main {
+  // padding-top: -100px;
+  // }
   #main div{
     width: 98%!important;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   #main h2{
-    padding-left: 5%;
+    font-size: 1.3em;
+    margin-top: -35px;
+    margin-bottom: 20px;
+    margin-left: -6px;
+
+  }
+  #main span {
+    font-size: 0.9em;
+  }
+  #main .intro span {
+    margin-bottom: 40px;
+    margin-top: -10px;
   }
 }
 
@@ -278,7 +292,6 @@ header {
 }
 
 .btn {
-  float: left;
   border-radius: 5px;
   padding: 5px 9px;
   font-size: 1.2em;
@@ -287,6 +300,7 @@ header {
   cursor: pointer;
   color: white;
   font-family: 'Roboto Slab', serif;
+
   &:hover {
     background-color: #c15443;
   }
@@ -333,26 +347,44 @@ header {
   #contacts div {
     width: 80%;
     margin-top: 3%;
+    & label {
+      font-size: 1.2em;
+    }
   }
   #contacts .kontaktInfo {
-    padding-left: 23%;
+    padding-left: 21%;
+    & div {
+      margin-left: 12px;
+      margin-top: 25px;
+      margin-bottom: -60px;
+    }
+    & h5 {
+      margin-left: 2px;
+    }
+  }
+  #contacts .kontaktForm {
+    margin-left: 5px;
+    & h5 {
+      margin-right: -40px;
+    }
   }
 }
 
 
-/*faq block*/
-#faq {
+/*comments block*/
+#disqus_thread {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 15%;
+}
+
+#comments {
   background-color: #fff;
   border-top: 2px dashed #e4e4e4;
-  width: 100%;
+  width: 80%;
   float: left;
   padding-top: 70px;
   padding-bottom: 70px;
-  & div {
-    width: 25%;
-    margin-left: 6%;
-    float: left;
-  }
   & .title {
     font-weight: lighter;
     color: #a3a0ad;
@@ -373,17 +405,17 @@ header {
 }
 
 @media (min-width: 801px) {
-  #faq div {
-    width: 25%;
-    margin-left: 6%;
-    float: left;
+  #comments div {
+    width: 70%;
+    margin-left: 25%;
   }
 }
 
 @media (max-width: 800px) {
-  #faq div {
-    width: 80%;
-    margin-left: 10%;
+  #comments div {
+    width: 85%;
+    margin-left: 15%;
     float: left;
+    text-align: center;
   }
 }
