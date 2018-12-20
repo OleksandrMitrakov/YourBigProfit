@@ -14,11 +14,14 @@
     <div id="logo" onclick="slowScroll('#top')">
       <span>Your Big Profit</span>
     </div>
-    <div id="about">
-      <a href="#" onclick="slowScroll('#main')">O NAS</a>
-      <a href="#" onclick="slowScroll('#overview')">OFERTA</a>
-      <a href="#" onclick="slowScroll('#contacts')">KONTAKT</a>
-      <a href="#" onclick="slowScroll('#comments')">REFERENCJE</a>
+    <div id="menu">
+      <a href="#" class="menuTrigger"><img src="img/hamburgerIcon.png" alt="menu"></a>
+      <ul class="menu">
+        <li><a href="#" onclick="slowScroll('#main')">O NAS</a></li>
+        <li><a href="#" onclick="slowScroll('#overview')">OFERTA</a></li>
+        <li><a href="#" onclick="slowScroll('#contacts')">KONTAKT</a></li>
+        <li><a href="#" onclick="slowScroll('#comments')">REFERENCJE</a></li>
+      </ul>
     </div>
   </header>
 
@@ -63,18 +66,20 @@
   </div>
 
   <div id="contacts">
+
       <div class="kontaktForm">
         <center><h5>NAPISZ DO NAS</h5></center>
-        <form id="form_input">
+        <form action="mail_handler.php" method="post" name="form" id="form_input" >
           <label for="name">Imię <span>*</span></label><br>
-          <input type="text" placeholder="Wpisz swoje imię" name="name" id="name"><br>
+          <input type="text" name="name" placeholder="Wpisz swoje imię" id="name" required><br>
           <label for="email">E-mail <span>*</span></label><br>
-          <input type="email" placeholder="Wpisz swój e-mail" name="email" id="email"><br>
+          <input type="email" name="email" placeholder="Wpisz swój e-mail" id="email" required><br>
           <label for="message">Wiadomość <span>*</span></label><br>
-          <textarea placeholder="Wpisz treść wiadomosści..." name="message" id="message"></textarea><br>
-          <div id="mess_send" class="btn">Wyślij</div>
+          <textarea name="message" placeholder="Wpisz treść wiadomosści..." id="message" required></textarea><br>
+          <input type="submit" name="submit" value="Wyślij" id="mess_send" class="btn"><br>
         </form>
       </div>
+
       <div class="kontaktInfo">
         <div>
           <h5>KONTAKT</h5><br>
@@ -99,6 +104,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   <script>
 
     function slowScroll(id) {
@@ -113,7 +119,8 @@
       else
         $("header").attr("class", "fixed");
     })
-    
+
+
   </script>
 </body>
 

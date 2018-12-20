@@ -38,6 +38,8 @@ header {
       line-height: 45px;
       margin-left: 40px;
       font-family: 'Suez One', serif;
+      position: relative;
+      z-index: 100;
     }
   }
 }
@@ -54,14 +56,19 @@ header {
   }
 }
 
-#about {
+#menu {
   text-align: center;
   font-size: 1em;
   line-height: 40px;
   margin-bottom: 10px;
+  & li {
+    display: inline-block;
+  }
   & a {
     color: #fff;
     text-decoration: none;
+    display: block;
+    padding: 10px 20px;
     &:hover {
       color: #484848;
       text-decoration: underline;
@@ -69,6 +76,59 @@ header {
   }
   & a:not(:last-child) {
     margin-right: 7%;
+  }
+  & .menuTrigger {
+    text-align: right;
+    display: none;
+    & img {
+      height: 45px;
+      width: 45px;
+      margin-right: 2%;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 550px) {
+  #menu {
+    & li {
+      display: block;
+      text-align: center;
+    }
+    & ul {
+      display: none;
+    }
+    & a {
+      border-bottom: 0.5px solid #1a1a1a;
+      opacity: 0.9;
+      background-color: #d9d9d9;
+      color: #4d4d4d;
+      padding: 0;
+      margin-bottom: 3px;
+      width: 75%;
+      margin-left: 10%;
+    }
+    & .menuTrigger {
+       display: block;
+       background-color: transparent;
+       border: 0;
+       margin-left: 7%;
+       margin-top: -41px;
+     }
+  }
+}
+
+@media screen and (min-width: 319px) {
+   header #logo span {
+    font-size: 1.3em;
+    margin-left: 34px;
+  }
+  #menu .menuTrigger img {
+    height: 57px;
+    width: 53px;
+    margin-right: -6%;
+    margin-top: -3%;
   }
 }
 
@@ -81,7 +141,7 @@ header {
   & #logo {
     color: #343434;
   }
-  & #about a {
+  & #menu a {
     color: #343434;
       &:hover {
         color: #7c7c7c;
@@ -97,7 +157,7 @@ header {
     font-size: 1.1em;
   }
 
-  #about {
+  #menu {
     float: right;
     width: 67%;
   }
@@ -111,7 +171,7 @@ header {
     font-size: 1.5em;
   }
 
-  #about {
+  #menu {
     float: left;
     width: 100%;
   }
@@ -145,18 +205,26 @@ header {
   }
 }
 
-@media (max-width: 1000px) and (min-width: 651px){
+@media (max-width: 1000px) and (min-width: 501px){
   #top {
     font-size: 2em;
     height: 500px;
+    & h1 {
+      padding-top: 40%;
+      font-size: 1.7em;
+    }
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
   #top {
     font-size: 1.5em;
     padding-top: 50%;
     height: 400px;
+    & h1 {
+      padding-top: 50%;
+      font-size: 1.7em;
+    }
   }
 }
 
@@ -342,14 +410,14 @@ header {
 
 .btn {
   border-radius: 5px;
-  padding: 5px 9px;
-  font-size: 1.2em;
+  padding: 5px 6px;
+  font-size: 1em;
   background-color: #ec6550;
   text-shadow: #454545 0 0 2px;
   cursor: pointer;
   color: white;
   font-family: 'Roboto Slab', serif;
-
+  margin-left: 10px;
   &:hover {
     background-color: #c15443;
   }
@@ -401,7 +469,7 @@ header {
     }
   }
   #contacts .kontaktInfo {
-    padding-left: 30%;
+    padding-left: 20%;
     & div {
       margin-left: 12px;
       margin-top: 25px;
