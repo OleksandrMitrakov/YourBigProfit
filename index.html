@@ -15,12 +15,18 @@
       <span>Your Big Profit</span>
     </div>
     <div id="menu">
-      <a href="#" class="menuTrigger"><img src="img/hamburgerIcon.png" alt="menu"></a>
+      <div id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="menu">
         <li><a href="#" onclick="slowScroll('#main')">O NAS</a></li>
         <li><a href="#" onclick="slowScroll('#overview')">OFERTA</a></li>
         <li><a href="#" onclick="slowScroll('#contacts')">KONTAKT</a></li>
+        <!-- TODO:
         <li><a href="#" onclick="slowScroll('#comments')">REFERENCJE</a></li>
+        -->
       </ul>
     </div>
   </header>
@@ -42,31 +48,25 @@
   <div id="overview">
     <h2>Co oferujemy:</h2>
     <h4>Z nami wszystko staje się proste</h4>
-
     <div class="img">
       <img src="img/1.jpeg" alt="">
       <span>Poszukiwanie klientów zagranicznych</span>
     </div>
-
     <div class="img">
       <img src="img/2.jpeg" alt="">
       <span>Mailing i ofertowanie</span>
     </div>
-
     <div class="img">
       <img src="img/3.jpeg" alt="">
       <span>Pośrednictwo eksportowe/importowe</span>
     </div>
-
     <div class="img">
       <img src="img/4.jpeg" alt="">
       <span>Kompleksowa obsługa handlowa</span>
     </div>
-
   </div>
 
   <div id="contacts">
-
       <div class="kontaktForm">
         <center><h5>NAPISZ DO NAS</h5></center>
         <form action="mail_handler.php" method="post" name="form" id="form_input" >
@@ -79,20 +79,20 @@
           <input type="submit" name="submit" value="Wyślij" id="mess_send" class="btn"><br>
         </form>
       </div>
-
       <div class="kontaktInfo">
         <div>
           <h5>KONTAKT</h5><br>
           <h3>Your Big Profit</h3>
           <p>ul. Skwierzyńska 26/5</p>
-          <p>53-522 Wrocław</p>
+          <p>Wrocław, 53-522</p>
           <p>Tel: +48 535 477 046</p>
-          <p>E-mail: mitrakova.iana@gmail.com</p>
+          <p>E-mail: vandy_invectors@yahoo.com</p>
         </div>
       </div>
 
   </div>
 
+  <!-- TODO:
   <div id="comments">
     <div>
       <span class="title">Referencje</span><br>
@@ -101,26 +101,16 @@
       <span class="heading">Zaufali nam:</span>
       <p>Place for company icons</p>
     </div>
-  </div>
+  </div> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script>
-
     function slowScroll(id) {
       $('html, body').animate({
         scrollTop: $(id).offset().top
       }, 500);
     }
-
-    $(document).on("scroll", function (){
-      if($(window).scrollTop() === 0)
-        $("header").removeClass("fixed");
-      else
-        $("header").attr("class", "fixed");
-    })
-
-
   </script>
 </body>
 
