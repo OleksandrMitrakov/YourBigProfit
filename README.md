@@ -1,6 +1,6 @@
 # YourBigProfit
 ResponsiveWebsite
 
-Responsive Landing Page with HTML5, CSS3 and little bit JS :)
+Responsive Landing Page with HTML5, CSS3,JS and PHP :)
 
-You can check it <a href="https://testybp.surge.sh" target="_blank">here</a>
+You can check it <a href="https://yourbigpr0fit.000webhostapp.com" target="_blank">here</a>
