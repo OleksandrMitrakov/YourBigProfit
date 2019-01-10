@@ -342,14 +342,14 @@ header {
   }
 
   #main h2{
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin-top: -35px;
     margin-bottom: 20px;
     margin-left: -6px;
 
   }
   #main span {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   #main .intro span {
     margin-bottom: 40px;
@@ -414,12 +414,15 @@ header {
         height: 180px;
       }
       & span {
-        font-size: 1.2em;
+        font-size: 1.1em;
       }
     }
     & h2 {
       margin-top: -10%;
-      font-size: 3.4em;
+      font-size: 2.5em;
+    }
+    & h4 {
+      font-size: 1.2em;
     }
   }
 }
@@ -529,12 +532,29 @@ header {
   }
 }
 
+.error {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 3px;
+  margin-left: 5px;
+}
+
+.success{
+  color: #379137;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  margin-left: 10px;
+}
+
 @media (max-width: 750px) {
   #contacts div {
     width: 80%;
     margin-top: 3%;
     & label {
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
   }
   #contacts .kontaktInfo {
@@ -553,8 +573,13 @@ header {
     & h5 {
       margin-right: -40px;
     }
+    & .error {
+      font-size: 11px;
+      width: 100%;
+    }
   }
 }
+
 
 
 /*comments block // TODO: onGoing

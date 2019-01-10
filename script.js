@@ -32,21 +32,4 @@ $(document).ready(function () {
         $('#menu ul').removeAttr('style');
       }
     });
-    
-  // $(window).resize(function(){
-  //   if($(window).width() > 550) {
-  //     $('.menu li a').on("click", function() {
-  //       $('#menu ul').css("display", "block");
-  //     });
-  //   }
-  // });
-  //
-  // $(window).resize(function(){
-  //   if($(window).width() < 550) {
-  //     $('.menu li a').on("click", function() {
-  //       $('#menu ul').css("display", "none");
-  //     });
-  //   }
-  // });
-
 });

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Your Big Profit</title>
+  <?php include('mail_handler.php'); ?>
   <link rel="stylesheet" href="scss/main.min.css">
 </head>
 
@@ -69,14 +70,21 @@
   <div id="contacts">
       <div class="kontaktForm">
         <center><h5>NAPISZ DO NAS</h5></center>
-        <form action="mail_handler.php" method="post" name="form" id="form_input" >
+        <a id="form"></a>
+        <form action="#form" method="post" name="form" id="form_input" >
           <label for="name">Imię <span>*</span></label><br>
-          <input type="text" name="name" placeholder="Wpisz swoje imię" id="name" required><br>
+          <input type="text" name="name" placeholder="Wpisz swoje imię" id="name" value="<?= $name ?>"><br>
+          <span class="error"><?= $name_error ?></span>
           <label for="email">E-mail <span>*</span></label><br>
-          <input type="email" name="email" placeholder="Wpisz swój e-mail" id="email" required><br>
-          <label for="message">Wiadomość <span>*</span></label><br>
-          <textarea name="message" placeholder="Wpisz treść wiadomosści..." id="message" required></textarea><br>
+          <input type="text" name="email" placeholder="Wpisz swój e-mail" id="email" value="<?= $email ?>"><br>
+          <span class="error"><?= $email_error ?></span>
+          <label for="url">Strona www </label><br>
+          <input type="text" name="url" placeholder="http://" id="url" value="<?= $url ?>"><br>
+          <span class="error"><?= $url_error ?></span>
+          <label for="message">Wiadomość </label><br>
+          <textarea type="text" name="message" placeholder="Wpisz treść wiadomosści..." id="message" value="<?= $message ?>"></textarea><br>
           <input type="submit" name="submit" value="Wyślij" id="mess_send" class="btn"><br>
+          <span class="success"><?= $success; ?></span>
         </form>
       </div>
       <div class="kontaktInfo">
